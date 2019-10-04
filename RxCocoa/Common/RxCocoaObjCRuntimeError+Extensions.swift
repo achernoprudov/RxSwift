@@ -6,9 +6,7 @@
 //  Copyright © 2016 Krunoslav Zaher. All rights reserved.
 //
 
-#if SWIFT_PACKAGE && !DISABLE_SWIZZLING && !os(Linux)
     import RxCocoaRuntime
-#endif
 
 #if !DISABLE_SWIZZLING && !os(Linux)
     /// RxCocoa ObjC runtime interception mechanism.
