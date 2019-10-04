@@ -16,19 +16,11 @@ extension Product {
 
 extension Target {
   static func rxCocoa() -> [Target] {
-    #if os(Linux)
-      return [.target(name: "RxCocoa", dependencies: ["RxSwift", "RxRelay"])]
-    #else
       return [.target(name: "RxCocoa", dependencies: ["RxSwift", "RxRelay", "RxCocoaRuntime"])]
-    #endif
   }
 
   static func rxCocoaRuntime() -> [Target] {
-    #if os(Linux)
-      return []
-    #else
       return [.target(name: "RxCocoaRuntime", dependencies: ["RxSwift"])]
-    #endif
   }
 
   static func allTests() -> [Target] {
